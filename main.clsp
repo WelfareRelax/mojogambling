@@ -1,0 +1,28 @@
+(mod (
+        MAX_BET
+        RANDOM_VALUE
+        THRESHOLD
+        MULTIPLIER
+        bet
+        player_puzzlehash
+     )
+
+    (defconstant CREATE_COIN 51)
+    (defconstant CREATE_COIN_ANNOUNCEMENT 60)
+
+    (defun-inline player_wins (bet player_puzzlehash)
+        (list
+            (list CREATE_COIN player_puzzlehash bet)
+            (list CREATE_COIN_ANNOUNCEMENT bet)
+            (list CREATE_COIN_ANNOUNCEMENT player_puzzlehash)
+        )
+    )
+     ; main
+    (if (> MAX_BET bet)
+       (if (> RANDOM_VALUE THRESHOLD)
+            (player_wins (* MULTIPLIER bet) player_puzzlehash)
+            (x)
+       )
+    (x)
+    )
+)

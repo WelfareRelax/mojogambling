@@ -1,0 +1,28 @@
+    (mod ()
+        (defun join_two (first second)
+            (c first (c second ()))
+        )
+        (defun get_element (elements n)
+            (if (= n 0)
+                (f elements)
+                (get_element (r elements) (- n 1))
+            )
+        )
+        (defun add_element (elements n element)
+            (if (= n 0)
+                (c element elements)
+                (c (f elements) (add_element (r elements) (- n 1) element))
+            
+            )
+        )
+
+
+
+
+        ;(r (join_two 1 2))
+        ;(join_two 1 2)
+        (get_element (add_element (list 1 2 3) 3 4) 2)
+        ;(get_element (list 1 2 3 4 5) 2)
+        ;(list (f (list 1 2)) ( f (r (list 1 2))) 3)
+        ;(get_element (list (list (list 0 1) 2) 3) 0)
+    )
