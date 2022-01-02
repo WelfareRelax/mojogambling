@@ -23,6 +23,6 @@
             (player_wins (* MULTIPLIER bet) player_puzzlehash)
             (x)
        )
-    (x)
+       (x)
     )
 )
